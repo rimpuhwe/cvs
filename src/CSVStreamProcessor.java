@@ -19,6 +19,7 @@ public class CSVStreamProcessor {
                 .reduce(Integer::sum);
 
         double Average =  (double) (sum.isPresent() ? sum.getAsInt() : 0) /list.size() ;
+           System.out.printf("The average age from the file  is : %.2f" ,Average);
        }
        catch (Exception e) {
            throw new RuntimeException(e);
